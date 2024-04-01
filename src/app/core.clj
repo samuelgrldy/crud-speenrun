@@ -45,6 +45,15 @@
     )
   )
 
+;;read all doc
+(defn read-all-doc-from-coll
+  [coll-name]
+  (let [coll-path (str "resources/" coll-name ".edn")
+        existing-file (edn/read-string (slurp coll-path))]
+    existing-file
+    ))
+  
+
 ;;find doc(s) based on a query (as a map)
 (defn find-docs-on-coll
   "Find doc(s) based on a query (as a map) from a collection."
@@ -83,7 +92,7 @@
 
 
 (defn delete-many-docs
-  "Delete many docs in a collection based on ids in a list"
+  "Delete many docs in a collection based on list of ids"
   [coll-name ids]
   (let [coll-path (str "resources/" coll-name ".edn")
         existing-file (edn/read-string (slurp coll-path))
