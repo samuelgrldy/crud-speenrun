@@ -34,8 +34,8 @@ You can configure this with the setting:
 ;   - See https://calva.io/connect-sequences/
 ; 
 
-; Starting Jack-in Terminal: pushd c:\Users\ZENIUS EDUCATION\crud-speedrun\app & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
-; Using host:port 127.0.0.1:62689 ...
+; Starting Jack-in Terminal: pushd c:\Users\ZENIUS EDUCATION\Documents\GitHub\crud-speenrun & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:59936 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -46,401 +46,90 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉app.core꞉> 
 ; Jack-in done.
 clj꞉app.core꞉> 
-#uuid "c5ce89a6-6ed2-4f9d-86b0-9bf38c13abcf"
-clj꞉app.core꞉> 
 java.util.UUID
 clj꞉app.core꞉> 
-; Execution error (IllegalArgumentException) at app.core/eval8028 (form-init6164465840101775750.clj:8).
-; Don't know how to create ISeq from: java.util.UUID
-clj꞉app.core꞉> 
-"daeba97e-4ec9-48ae-8adf-62d467a7b6ce"
-clj꞉app.core꞉> 
-#'app.core/str-to-uuid
-clj꞉app.core꞉> 
-#'app.core/test-uuid
-clj꞉app.core꞉> 
-(str-to-uuid test-uuid)
-#uuid "8fcc1ac0-32cc-47a5-9bb2-b0e35e8e3438"
-clj꞉app.core꞉> 
-java.util.UUID
-clj꞉app.core꞉> 
-; Syntax error (NoSuchFieldException) compiling . at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:4:1).
-; generateUUID
-clj꞉app.core꞉> 
-#uuid "0e7a6860-f346-4498-b411-2683c44d2907"
+#'app.core/create-collection
 clj꞉app.core꞉> 
 #'app.core/generateUUID
 clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-(create-collection test)
-nil
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-(create-collection test)
-nil
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-(create-collection test)
-; Execution error (ClassCastException) at app.core/create-collection (form-init6164465840101775750.clj:9).
-; class clojure.core$test cannot be cast to class clojure.lang.Named (clojure.core$test and clojure.lang.Named are in unnamed module of loader 'app')
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-(create-collection test)
-; Execution error (ClassCastException) at app.core/create-collection (form-init6164465840101775750.clj:9).
-; class clojure.core$test cannot be cast to class clojure.lang.Named (clojure.core$test and clojure.lang.Named are in unnamed module of loader 'app')
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-(create-collection "test")
-nil
-clj꞉app.core꞉> 
-#'app.core/create-collection
-clj꞉app.core꞉> 
-generateUUID
-#function[app.core/generateUUID]
-clj꞉app.core꞉> 
-(create-collection "test")
-nil
-clj꞉app.core꞉> 
-(create-collection "db")
-nil
-clj꞉app.core꞉> 
-{:id #function[app.core/generateUUID]}
-clj꞉app.core꞉> 
-clojure.lang.PersistentArrayMap
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-""
-clj꞉app.core꞉> 
-; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:25:5).
-; Unable to resolve symbol: coll-path-path in this context
+#'app.core/add-doc-to-collection
 clj꞉app.core꞉> 
 #'app.core/add-doc-to-collection
 clj꞉app.core꞉> 
-(add-doc-to-collection "test" {:test "asu"})
-nil
-clj꞉app.core꞉> 
-(add-doc-to-collection "test" {:name "John" :address "Doe"})
-nil
-clj꞉app.core꞉> 
-(map #(assoc % :id (generateUUID)) [{:a 1} {:b 2}])
-({:a 1, :id "6387baa2-b494-4530-846b-7db5d13fef97"} {:b 2, :id "7282a139-8b46-48e4-88e0-fc75728b6795"})
-clj꞉app.core꞉> 
-(get :a (map #(assoc % :id (generateUUID)) [{:a 1} {:b 2}]))
-nil
-clj꞉app.core꞉> 
-(get :a (map #(assoc % :id (generateUUID)) [{:a 1} {:b 2}]) "nope")
-"nope"
-clj꞉app.core꞉> 
-(get (map #(assoc % :id (generateUUID)) [{:a 1} {:b 2}]) :a "nope")
-"nope"
-clj꞉app.core꞉> 
-(get (first (map #(assoc % :id (generateUUID)) [{:a 1} {:b 2}])) :a "nope")
-1
-clj꞉app.core꞉> 
 #'app.core/add-many-docs-to-collection
-clj꞉app.core꞉> 
-(add-many-docs-to-collection "test" [{:gender "helicopter"} {:foo "bar"}])
-; Execution error (FileNotFoundException) at java.io.FileOutputStream/open0 (FileOutputStream.java:-2).
-; test (Access is denied)
-clj꞉app.core꞉> (add-doc-to-collection "test" {:name "John" :address "Die"})
-nil
-clj꞉app.core꞉> 
-(add-many-docs-to-collection "test" [{:name "John" :gender "helicopter"} {:foo "bar" :bar "foo"}])
-; Execution error (FileNotFoundException) at java.io.FileOutputStream/open0 (FileOutputStream.java:-2).
-; test (Access is denied)
-clj꞉app.core꞉> 
-#'app.core/add-many-docs-to-collection
-clj꞉app.core꞉> 
-(add-many-docs-to-collection "test" [{:name "John" :gender "helicopter"} {:foo "bar" :bar "foo"}])
-nil
-clj꞉app.core꞉> 
-(add-many-docs-to-collection "test" [{:name "Aua" :gender "deleted"} {:name "Bua" :gender "deleted"}])
-nil
-clj꞉app.core꞉> 
-; Syntax error macroexpanding clojure.core/defn at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:45:1).
-; () - failed: Insufficient input at: [:fn-tail] spec: :clojure.core.specs.alpha/defn-args
-clj꞉app.core꞉> 
-#'app.core/test-map
-clj꞉app.core꞉> 
-{:a 1, :b 2, :c 3}
-clj꞉app.core꞉> 
-{:a 1, :b 2}
-clj꞉app.core꞉> 
-{:a 1, :b 2}
-clj꞉app.core꞉> 
-{:a 10, :b 2}
-clj꞉app.core꞉> 
-{:a "loh", :b 2}
-clj꞉app.core꞉> 
-{:a 1, :b 2}
-clj꞉app.core꞉> 
-1
-clj꞉app.core꞉> 
-1
-clj꞉app.core꞉> 
-#'app.core/read-doc
-clj꞉app.core꞉> 
-(read-doc "test" "b3edbedc-08ba-4498-b18b-a04a9c11cc80")
-true
-clj꞉app.core꞉> 
-(some #(= (:id %) b3edbedc-08ba-4498-b18b-a04a9c11cc80) (edn/read-string (slurp "resource/test.edn")))
-; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\.calva\output-window\output.calva-repl:194:8).
-; Unable to resolve symbol: b3edbedc-08ba-4498-b18b-a04a9c11cc80 in this context
-clj꞉app.core꞉> (some #(= (:id %) "b3edbedc-08ba-4498-b18b-a04a9c11cc80") (edn/read-string (slurp "resource/test.edn")))
-; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
-; resource\test.edn (The system cannot find the path specified)
-clj꞉app.core꞉> 
-clj꞉app.core꞉>  (some #(= (:id %) "b3edbedc-08ba-4498-b18b-a04a9c11cc80") (edn/read-string (slurp "resources/test.edn")))
-true
-clj꞉app.core꞉> 
-#'app.core/read-doc
-clj꞉app.core꞉> 
-(read-doc "test" "b3edbedc-08ba-4498-b18b-a04a9c11cc80")
-{:name "John", :gender "helicopter", :id "b3edbedc-08ba-4498-b18b-a04a9c11cc80"}
-clj꞉app.core꞉> 
-true
-clj꞉app.core꞉> 
-false
-clj꞉app.core꞉> 
-false
-clj꞉app.core꞉> 
-(read-doc "test" "d")
-"gaada doc-nya bos"
-clj꞉app.core꞉> 
-; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:55:9).
-; Unable to resolve symbol: docs in this context
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-; Execution error (ArityException) at app.core/eval8356 (form-init6164465840101775750.clj:223).
-; Wrong number of args (3) passed to: app.core/find-docs
-clj꞉app.core꞉> 
-; Execution error (ClassCastException) at app.core/find-docs (form-init6164465840101775750.clj:55).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-; Execution error (ClassCastException) at app.core/find-docs (form-init6164465840101775750.clj:55).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-; Execution error (ClassCastException) at app.core/find-docs (form-init6164465840101775750.clj:55).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-(seq {:a 1})
-([:a 1])
-clj꞉app.core꞉> 
-(key {:a 1})
-; Execution error (ClassCastException) at app.core/eval8374 (form-init6164465840101775750.clj:243).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-(val {:a 1})
-; Execution error (ClassCastException) at app.core/eval8376 (form-init6164465840101775750.clj:247).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-"gaada doc-nya bos"
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-"gaada doc-nya bos"
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-()
-clj꞉app.core꞉> 
-(keys {:gender "a"})
-(:gender)
-clj꞉app.core꞉> 
-(flatten(keys {:gender "a"}))
-(:gender)
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-(find-docs "test" {:gender "helicopter"})
-()
-clj꞉app.core꞉> 
-(vals {:gender "a"})
-; Execution error (ClassCastException) at app.core/eval8421 (form-init6164465840101775750.clj:275).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-("a")
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-; Execution error (IllegalArgumentException) at app.core/find-docs (form-init6164465840101775750.clj:55).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-; Execution error (IllegalArgumentException) at app.core/find-docs$filter-by-key-val$fn (form-init6164465840101775750.clj:54).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉app.core꞉> 
-(get)#'app.core/find-docs
-clj꞉app.core꞉> 
-({:name "John", :gender "helicopter", :id "b3edbedc-08ba-4498-b18b-a04a9c11cc80"})
-clj꞉app.core꞉> 
-#'app.core/find-docs
-clj꞉app.core꞉> 
-#'app.core/test-lmap
-clj꞉app.core꞉> 
-{:a 1, :id "11"}
-clj꞉app.core꞉> 
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-#'app.core/updated-map
-clj꞉app.core꞉> 
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} {:a 4, :id "11"}]
-clj꞉app.core꞉> 
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} {:a 4, :id "11"}]
-clj꞉app.core꞉> 
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-{:a 1, :id "11"}
-clj꞉app.core꞉> 
-{:a 1, :id "11"}
-clj꞉app.core꞉> 
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-#'app.core/updated-map
-clj꞉app.core꞉> 
-updated-map
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-(merge test-lmap updated-map)
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} {:a 4, :id "11"}]
-clj꞉app.core꞉> 
-(merge test-lmap [updated-map])
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} {:a 4, :id "11"}]
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} [{:a 4, :id "11"}]]
-clj꞉app.core꞉> 
-test-map
-{:a 1, :b 2}
-clj꞉app.core꞉> 
-test-lmap
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"}]
-clj꞉app.core꞉> 
-{:a 1, :id "11"}
-clj꞉app.core꞉> 
-(merge {:a "1" :id "11"} {:a 2 :id "11"})
-{:a 2, :id "11"}
-clj꞉app.core꞉> 
-(merge {:a "1" :id "11"} {:a 2 :id "11"})
-{:a 2, :id "11"}
-clj꞉app.core꞉> 
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-#'app.core/updated-map
-clj꞉app.core꞉> 
-updated-map
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-(merge test-lmap updated-map)
-[{:a 1, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"} {:a 4, :id "11"}]
-clj꞉app.core꞉> 
-(remove #(= (:id %) "11") test-lmap)
-(merge ({:a 2, :id "22"} {:b 3, :id "33"}) updated-map)
-clj꞉app.core꞉> 
-{:a 4, :id "11"}
-clj꞉app.core꞉> 
-(merge updated-map (remove #(= (:id %) "11") test-lmap))
-; Execution error (ClassCastException) at app.core/eval8652 (form-init6164465840101775750.clj:358).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-clj꞉app.core꞉> 
-({:a 2, :id "22"} {:b 3, :id "33"})
-clj꞉app.core꞉> 
-(merge (remove #(= (:id %) "11") test-lmap) updated-map)
-({:a 4, :id "11"} {:a 2, :id "22"} {:b 3, :id "33"})
-clj꞉app.core꞉> 
-; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:65:19).
-; Unable to resolve symbol: coll-name in this context
-clj꞉app.core꞉> 
-; Syntax error compiling at (c:\Users\ZENIUS EDUCATION\crud-speedrun\app\src\app\core.clj:65:19).
-; Unable to resolve symbol: coll-name in this context
-clj꞉app.core꞉> 
-#'app.core/update-doc
-clj꞉app.core꞉> 
-(update-doc "test" "ab7e7060-3f7f-4a35-8295-d042ae5dbcdf" {:foo "foo"})
-; Execution error (ClassCastException) at app.core/update-doc (form-init6164465840101775750.clj:70).
-; class clojure.lang.Cons cannot be cast to class clojure.lang.IFn (clojure.lang.Cons and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉app.core꞉> 
-#'app.core/update-doc
-clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-(find-docs "test" {:foo "foo"})
-({:foo "foo", :bar "foo", :id "ab7e7060-3f7f-4a35-8295-d042ae5dbcdf"})
-clj꞉app.core꞉> 
-#'app.core/delete-doc
-clj꞉app.core꞉> 
-(delete-doc "test" "4d69c668-8024-40d2-8b67-134bcd667c39")
-nil
 clj꞉app.core꞉> 
 #'app.core/read-doc-from-coll
 clj꞉app.core꞉> 
 #'app.core/find-docs-on-coll
 clj꞉app.core꞉> 
-#'app.core/add-many-docs-to-collection
-clj꞉app.core꞉> (create-collection "test2")
-nil
+#'app.core/update-doc
 clj꞉app.core꞉> 
-(add-many-docs-to-collection "test2" [{:name "John" :address "Doe"} {:name "asu" :address "bismillah"} {:name "babi" :address "kecap"}])
-nil
-clj꞉app.core꞉> 
-(count (edn/read-string (slurp "resources/test2.edn")))
-3
-clj꞉app.core꞉> 
-(add-many-docs-to-collection "test2" [{:a 1} {:b 2} {:a 3}])
-nil
-clj꞉app.core꞉> 
-#'app.core/test-lmap
-clj꞉app.core꞉> 
-#'app.core/test-id-removed
-clj꞉app.core꞉> 
-#'app.core/remove-doc-test
-clj꞉app.core꞉> 
-#'app.core/test-id-removed
-clj꞉app.core꞉> 
-({:a 2, :id "22"} {:b 3, :id "33"})
+#'app.core/delete-doc
 clj꞉app.core꞉> 
 #'app.core/delete-many-docs
 clj꞉app.core꞉> 
-(delete-many-docs "test2" test-id-removed)
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd c:\Users\ZENIUS EDUCATION\Documents\GitHub\crud-speenrun & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:60127 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
 nil
 clj꞉app.core꞉> 
-#'app.core/test-id-removed
-clj꞉app.core꞉> (delete-many-docs "test2"  ["4de8d813-4ac8-4274-9de9-79d7da1ed657"
-                                          "064266b5-9a2e-4dda-a670-e16cdeca8404"
-                                          "4cae21d6-6689-439b-8f1a-6fffb082887d"
-                                          "7e2d75ad-36cd-47ff-9f2d-b70b675a8020"
-                                          "52c7f084-1a60-4953-93db-219bde689089"])
+; Jack-in done.
+clj꞉app.core꞉> 
+(create-collection "lasttest")
+nil
+clj꞉app.core꞉> 
+(add-doc-to-collection "lasttest" {:name "singleinput"})
+nil
+clj꞉app.core꞉> 
+(add-many-docs-to-collection "lasttest" [{:name "multiinput1"} {:name "multiinput2"}])
+nil
+clj꞉app.core꞉> 
+#'app.core/read-all-doc-from-coll
+clj꞉app.core꞉> 
+(read-all-doc-from-coll "lasttest")
+({:name "singleinput", :id "f3b3b3b4-0b1b-4b1b-8b1b-1b1b1b1b1b1b"} {:name "multiinput1", :id "f3b3b3b4-0b1b-4b1b-8b1b-1b1b1b1b1b1b"} {:name "multiinput2", :id "f3b3b3b4-0b1b-4b1b-8b1b-1b1b1b1b1b1b"})
+{:name "multiinput2", :id "f3b3b3b4-0b1b-4b1b-8b1b-1b1b1b1b1b1b"}
+clj꞉app.core꞉> 
+({:name "singleinput", :id "514cddc3-d16b-47e0-8be4-b4b5521d5a0c"}
+ {:name "multiinput1", :id "2857ee33-8824-41e5-9093-cd29cc17342c"}
+ {:name "multiinput2", :id "cb1926b8-4818-46bc-9768-1a4eae485d79"})
+clj꞉app.core꞉> 
+(read-doc-from-coll "lasttest" "f3b3b3b4-0b1b-4b1b-8b1b-1b1b1b1b1b1b")
+"gaada doc-nya bos"
+clj꞉app.core꞉> 
+(read-all-doc-from-coll "lasttest")
+({:name "singleinput", :id "514cddc3-d16b-47e0-8be4-b4b5521d5a0c"}
+ {:name "multiinput1", :id "2857ee33-8824-41e5-9093-cd29cc17342c"}
+ {:name "multiinput2", :id "cb1926b8-4818-46bc-9768-1a4eae485d79"})
+clj꞉app.core꞉> 
+(read-doc-from-coll "lasttest" "cb1926b8-4818-46bc-9768-1a4eae485d79")
+{:name "multiinput2", :id "cb1926b8-4818-46bc-9768-1a4eae485d79"}
+clj꞉app.core꞉> 
+(find-docs-on-coll "lasttest" {:name "multiinput2"})
+({:name "multiinput2", :id "cb1926b8-4818-46bc-9768-1a4eae485d79"})
+clj꞉app.core꞉> 
+(update-doc "lasttest" "cb1926b8-4818-46bc-9768-1a4eae485d79" {:name "multiinput2updated" :test "tis"})
+nil
+clj꞉app.core꞉> 
+(read-doc-from-coll "lasttest" "cb1926b8-4818-46bc-9768-1a4eae485d79")
+{:name "multiinput2updated", :id "cb1926b8-4818-46bc-9768-1a4eae485d79", :test "tis"}
+clj꞉app.core꞉> 
+(delete-doc "lasttest" "2857ee33-8824-41e5-9093-cd29cc17342c")
 nil
 clj꞉app.core꞉> 
 #'app.core/delete-many-docs
 clj꞉app.core꞉> 
-nil
-clj꞉app.core꞉> 
-#'app.core/delete-many-docs
-clj꞉app.core꞉> 
-(delete-many-docs "test2" test-id-removed)
-nil
-clj꞉app.core꞉> 
-(add-doc-to-collection "test2" {:name "babi" :address "panggang"})
-nil
-clj꞉app.core꞉> 
-(delete-many-docs "test2" ["b209b7ab-b75b-4d18-afc1-2e1adb4bf314"
-                           "227f750a-0ca6-4a62-818d-2e9284b526cb"])
+(delete-many-docs "lasttest" ["514cddc3-d16b-47e0-8be4-b4b5521d5a0c" "cb1926b8-4818-46bc-9768-1a4eae485d79"])
 nil
 clj꞉app.core꞉> 
